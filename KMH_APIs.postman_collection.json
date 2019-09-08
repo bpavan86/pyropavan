@@ -1,0 +1,631 @@
+{
+	"info": {
+		"_postman_id": "1b6927a3-43a1-4c4b-8c5a-b2ba8df11952",
+		"name": "KMH_APIs",
+		"description": "All the KMH APIs developed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET_ALL_USERS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "Lists all the users"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_SPECIFIC_USER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_account_id\":1}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "Gets the specific user details based on the user_account_is"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"given_name\":\"Mark\",\"surname\":\"Lebenski\",\"email\":\"mark.lebenski@kmh-gmbh.com\",\"phone\":\"+4915324569876\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "Adds the user details"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_USER",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"role_id\":4}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"roles"
+					]
+				},
+				"description": "Deletes the user based on API"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL_ROLES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3300/api/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"roles"
+					]
+				},
+				"description": "Lists all the roles"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_SPECIFIC_ROLE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"role_id\":2}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"roles"
+					]
+				},
+				"description": "Fetch the specific role based on the role_id"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_ROLE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"role_name\":\"Guest\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"roles"
+					]
+				},
+				"description": "Add the new role"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_ROLE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"role_id\":2}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"roles"
+					]
+				},
+				"description": "Deletes the specified role"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL_RIGHTS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/rights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"rights"
+					]
+				},
+				"description": "Lists all the rights"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_SPECIFIC_RIGHT",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"right_id\":2}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/rights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"rights"
+					]
+				},
+				"description": "Fetches the specific right details"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_RIGHT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"right_name\":\"Execute\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/rights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"rights"
+					]
+				},
+				"description": "Adds a new right"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_RIGHT",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"right_id\":2}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/rights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"rights"
+					]
+				},
+				"description": "Deletes the specified right"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL_USER_ROLES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3300/api/user_roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"user_roles"
+					]
+				},
+				"description": "Lists the user roles"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_SPECIFIC_USER_ROLES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user_id\":1,\"role_id\":\"1,2\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/user_roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"user_roles"
+					]
+				},
+				"description": "Fetches the specified User and specified role (optional) data"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_USER_ROLES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"roles\":\"1,2\",\"userid\":1}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/user_roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"user_roles"
+					]
+				},
+				"description": "Adds specified user roles"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_USER_ROLES",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"roles\":\"1,2\",\"userid\":1}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/user_roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"user_roles"
+					]
+				},
+				"description": "Delete the user roles"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ALL_ROLE_RIGHTS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3300/api/role_rights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"role_rights"
+					]
+				},
+				"description": "Fetches all the role rights"
+			},
+			"response": []
+		},
+		{
+			"name": "GET_SPECIFIC_ROLE_RIGHTS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"role_id\":1,\"rights\":\"1,2\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/role_rights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"role_rights"
+					]
+				},
+				"description": "Fetches the specified role and its corresponding rights"
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_ROLE_RIGHTS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rights\":\"1,2\",\"roleid\":1}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/role_rights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"role_rights"
+					]
+				},
+				"description": "Adds the rights for the role"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_ROLE_RIGHTS",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"rights\":\"1,2\",\"roleid\":1}"
+				},
+				"url": {
+					"raw": "http://localhost:3300/api/role_rights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3300",
+					"path": [
+						"api",
+						"role_rights"
+					]
+				},
+				"description": "Deletes the rights for the specified role"
+			},
+			"response": []
+		}
+	]
+}
