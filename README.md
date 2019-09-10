@@ -17,7 +17,9 @@ Please make sure that you have all the softwares listed above.
 
 2. Setup Database:
 After installing SQL Server, Open SSMS (SQL Server Management Studio) and browse for the App_DB_Scripts.sql file placed in the root folder of this project. This file have 4 sections. They are:
+
 *Note: (Execute scripts for each section at a time for better results)
+
 "*" - represents manadatory runs
 
 - Database Section: This is optional if you already have a Database. Run this section for a new database creation
