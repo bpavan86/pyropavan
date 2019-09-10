@@ -18,17 +18,17 @@ Please make sure that you have all the softwares listed above.
 2. Setup Database:
 After installing SQL Server, Open SSMS (SQL Server Management Studio) and browse for the App_DB_Scripts.sql file placed in the root folder of this project. This file have 4 sections. They are:
 *Note: (Execute scripts for each section at a time for better results)
-* - represents manadatory runs
+"*" - represents manadatory runs
 
 - Database Section: This is optional if you already have a Database. Run this section for a new database creation
 - Login Section: This is optional if you already have a SQL Server username and password. If you are using Windows authentication please uncomment and execute the scripts.
     - Creates Login with UserName: KMH_Admin and Password:"kmh123". (You can change to your own username and password)
     - "KMH_User" is created for this login.
     - Other scripts for giving the login DB Owner and SYS Admin permissions
-- *Schema Section: Creates Schema named "dev". Dont change the name and this is mandatory as this is used in the API
-- *Tables Section: Creates all the required tables for the application. This is mandatory
+- "*"Schema Section: Creates Schema named "dev". Dont change the name and this is mandatory as this is used in the API
+- "*"Tables Section: Creates all the required tables for the application. This is mandatory
 - Insert Data Section: This is optional. Inserting a row in Roles and Rights lookup tables
-- *Stored Procedure Section: Creates all the stored procedures required for the application. This is mandatory
+- "*"Stored Procedure Section: Creates all the stored procedures required for the application. This is mandatory
 
 3. Setup Node Project:
 After downloading the files from the git, follow the below steps:
